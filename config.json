@@ -1,0 +1,23 @@
+{
+  "scale_factor": 1.05,
+  "min_neighbors": 50,
+  "min_size": [
+    100,
+    100
+  ],
+  "confidence_threshold": 0.7,
+  "data_dir": "data",
+  "stored_faces_dir": "data/stored_faces",
+  "output_dir": "output",
+  "haar_cascade_xml": "haarcascade_frontalface_default.xml",
+  "batch_size": 10,
+  "max_faces_per_image": 10,
+  "enable_gpu": false,
+  "similarity_threshold": 0.8,
+  "top_n_matches": 5,
+  "log_level": "INFO",
+  "log_file": null,
+  "save_detected_faces": true,
+  "save_annotated_images": true,
+  "output_format": "json"
+}
