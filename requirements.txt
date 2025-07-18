@@ -2,3 +2,5 @@ opencv-python==4.11.0.86
 numpy==2.2.2
 imgbeddings==0.1.0
 huggingface-hub==0.24.0
+psutil>=5.8.0
+Pillow>=8.0.0

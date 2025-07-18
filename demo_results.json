@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-18T12:15:32.718498",
+    "total_images": 1,
+    "total_faces": 3,
+    "processing_time": 0.125,
+    "demo_mode": true
+  },
+  "results": [
+    {
+      "image_path": "demo_faces.jpg",
+      "faces": [
+        {
+          "id": "face_demo_001",
+          "bbox": [
+            120,
+            120,
+            160,
+            160
+          ],
+          "confidence": 0.95,
+          "center": [
+            200,
+            200
+          ]
+        },
+        {
+          "id": "face_demo_002",
+          "bbox": [
+            430,
+            130,
+            140,
+            140
+          ],
+          "confidence": 0.87,
+          "center": [
+            500,
+            200
+          ]
+        },
+        {
+          "id": "face_demo_003",
+          "bbox": [
+            300,
+            350,
+            100,
+            100
+          ],
+          "confidence": 0.73,
+          "center": [
+            350,
+            400
+          ]
+        }
+      ],
+      "face_count": 3,
+      "processing_time": 0.125,
+      "image_dimensions": [
+        800,
+        600
+      ],
+      "timestamp": "2025-07-18T12:15:32.718510"
+    }
+  ]
+}
