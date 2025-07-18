@@ -12,9 +12,9 @@ class FaceDetectionConfig:
     
     # Detection parameters
     scale_factor: float = 1.05
-    min_neighbors: int = 50
-    min_size: tuple = (100, 100)
-    confidence_threshold: float = 0.7
+    min_neighbors: int = 3  # Reduced for demo compatibility
+    min_size: tuple = (30, 30)  # Reduced for demo compatibility
+    confidence_threshold: float = 0.3  # Reduced for demo compatibility
     
     # Directories
     data_dir: str = "data"

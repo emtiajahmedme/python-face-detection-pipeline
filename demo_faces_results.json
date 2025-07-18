@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "timestamp": "2025-07-18T12:18:03.421630",
+    "image_path": "demo_faces.jpg",
+    "processing_time": 0.04649972915649414,
+    "faces_detected": 2,
+    "confidence_threshold": 0.3
+  },
+  "faces": [
+    {
+      "id": "face_1",
+      "bbox": [
+        398,
+        96,
+        201,
+        201
+      ],
+      "confidence": 0.9500000000000001,
+      "area": 40401,
+      "aspect_ratio": 1.0,
+      "relative_position": {
+        "x": 0.4975,
+        "y": 0.16
+      }
+    },
+    {
+      "id": "face_2",
+      "bbox": [
+        307,
+        351,
+        89,
+        89
+      ],
+      "confidence": 0.9500000000000001,
+      "area": 7921,
+      "aspect_ratio": 1.0,
+      "relative_position": {
+        "x": 0.38375,
+        "y": 0.585
+      }
+    }
+  ]
+}

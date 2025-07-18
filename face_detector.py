@@ -14,6 +14,12 @@ from imgbeddings import imgbeddings
 from config import FaceDetectionConfig
 from logger import get_logger, ProgressLogger
 
+# Make imgbeddings optional
+try:
+    EMBEDDINGS_AVAILABLE = True
+except ImportError:
+    EMBEDDINGS_AVAILABLE = False
+
 
 @dataclass
 class FaceDetectionResult:
@@ -87,8 +93,14 @@ class PremiumFaceDetector:
             if self.haar_cascade.empty():
                 raise ValueError("Failed to load Haar cascade classifier")
             
-            self.ibed = imgbeddings()
-            self.logger.info("Face detection models initialized successfully")
+            # Initialize imgbeddings only if needed and available
+            try:
+                self.ibed = imgbeddings()
+                self.logger.info("Face detection models initialized successfully (with embeddings)")
+            except Exception as e:
+                self.logger.warning(f"Embeddings model failed to initialize: {e}")
+                self.logger.info("Face detection models initialized successfully (without embeddings)")
+                self.ibed = None
             
         except Exception as e:
             self.logger.error(f"Failed to initialize models: {e}")
@@ -155,12 +167,14 @@ class PremiumFaceDetector:
                 
                 # Generate embedding if requested
                 embedding = None
-                if return_embeddings:
+                if return_embeddings and self.ibed is not None:
                     try:
                         pil_face = Image.fromarray(face_region)
                         embedding = self.ibed.to_embeddings(pil_face)[0]
                     except Exception as e:
                         self.logger.warning(f"Failed to generate embedding for face {i}: {e}")
+                elif return_embeddings and self.ibed is None:
+                    self.logger.debug("Embeddings requested but model not available")
                 
                 # Create metadata
                 metadata = {

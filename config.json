@@ -1,11 +1,11 @@
 {
   "scale_factor": 1.05,
-  "min_neighbors": 50,
+  "min_neighbors": 3,
   "min_size": [
-    100,
-    100
+    30,
+    30
   ],
-  "confidence_threshold": 0.7,
+  "confidence_threshold": 0.3,
   "data_dir": "data",
   "stored_faces_dir": "data/stored_faces",
   "output_dir": "output",

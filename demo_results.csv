@@ -1,0 +1,4 @@
+image_path,face_id,bbox_x,bbox_y,bbox_width,bbox_height,confidence
+demo_faces.jpg,face_demo_001,120,120,160,160,0.95
+demo_faces.jpg,face_demo_002,430,130,140,140,0.87
+demo_faces.jpg,face_demo_003,300,350,100,100,0.73
